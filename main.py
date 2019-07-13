@@ -2,7 +2,8 @@ import brainfuck
 
 
 def main():
-    pass
+    line = input("bf> ")
+    print(brainfuck.parse(line))
 
 
 if __name__ == "__main__":
