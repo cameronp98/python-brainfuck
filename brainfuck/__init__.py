@@ -14,6 +14,9 @@ def parse(line) -> List:
     stack = []
 
     for c in line:
+        if c.isspace():
+            # skip whitespace
+            continue
         if c in "><+-.,":
             # add simple operators to the program list
             ops.append(c)
