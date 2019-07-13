@@ -32,9 +32,9 @@ def parse(line) -> List:
             # report unreckognised character
             raise ParseError(f"Unknown character '{c}'")
 
-        # report unmatched '['
-        if stack:
-            raise ParseError("Unmatched '['")
+    # report unmatched '['
+    if stack:
+        raise ParseError("Unmatched '['")
 
-        return ops
+    return ops
 
