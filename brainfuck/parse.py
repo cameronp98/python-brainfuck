@@ -13,11 +13,11 @@ def parse(line) -> List:
     for c in line:
         if c in "><+-.,":
             # add simple operators to the program list
-            ops.push(c)
+            ops.append(c)
         elif c == "[":
             # save the current program on the stack and start accumulating
             # instructions until a close loop instruction is encountered
-            stack.push(ops)
+            stack.append(ops)
             ops = []
         elif c == "]":
             # save the loop body, pop the original program from the stack,
@@ -27,7 +27,7 @@ def parse(line) -> List:
                 ops = stack.pop()
             else:
                 raise ParseError("Unexpected ']'")
-            ops.push(loop)
+            ops.append(loop)
         else:
             # report unreckognised character
             raise ParseError(f"Unknown character '{c}'")
