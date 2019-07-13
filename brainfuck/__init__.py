@@ -1,2 +1,2 @@
-""" A brainfuck interpreter """
+""" A Brainfuck Interpreter """
 
