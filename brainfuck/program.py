@@ -62,7 +62,7 @@ class Program:
             # input the cell at the pointer as either a number,
             # or a single character
             value = input(f"Input for cell {self.pointer}: ")
-            if value.is_numeric():
+            if value.isnumeric():
                 self.cell = int(value)
             elif len(value) == 1:
                 self.cell = ord(value)
