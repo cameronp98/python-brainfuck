@@ -17,7 +17,7 @@ class Program:
 
     @cell.setter
     def cell(self, value):
-        self.cell = value
+        self.cells[self.pointer] = value
 
 
     def modify_pointer(self, amount):
@@ -35,7 +35,7 @@ class Program:
             # If the cell at the pointer is still non-zero, repeat.
             while self.cell != 0:
                 self.execute_many(op)
-                if cell[0] == 0:
+                if self.cell == 0:
                     break
 
         elif op == "+":
