@@ -12,18 +12,18 @@ def parse(string):
     ops = []
     stack = []
 
-    for c in program:
+    for c in string:
         if c.isspace():
             # skip whitespace
             continue
         
         if c in "><+-.,":
-            # add simple operators to the program list
+            # add the simple operators to the operation list
             ops.append(c)
 
         elif c == "[":
-            # save the current program on the stack and start accumulating
-            # instructions until a close loop instruction is encountered
+            # save the current operations to the stack and start
+            # accumulate instructions until ']' is encountered
             stack.append(ops)
             ops = []
 
