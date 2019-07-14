@@ -1,5 +1,5 @@
 """
-Parse brainfuck programs into operations.
+Parse brainfuck programs into a list of operations.
 """
 
 class ParseError(Exception):
@@ -7,7 +7,10 @@ class ParseError(Exception):
 
 
 def parse(string):
-    """Parse the given string into a list of operators and loops"""
+    """
+    Parse the given string into a list of operators.
+    Loops (`[...]`) are stored as nested lists.
+    """
 
     ops = []
     stack = []

@@ -4,6 +4,10 @@ act upon it using brainfuck operations.
 """
 
 class ExecutionError(Exception):
+    """
+    An error during program execution.
+    """
+
     pass
 
 
@@ -11,6 +15,10 @@ class Program:
     """Represents the execution state of a brainfuck program."""
 
     def __init__(self, num_cells):
+        """
+        Create a new program with a given number of cells
+        """
+
         self.cells = [0 * num_cells]
         self.pointer = 0
 
@@ -26,12 +34,17 @@ class Program:
 
 
     def modify_pointer(self, amount):
+        """
+        Change the pointer by `amount` and wrap around the
+        program's cell count.
+        """
+
         self.pointer = (self.pointer + amount) % len(self.cells)
 
 
     def execute_one(self, op):
         """
-        Executes the given operation.
+        Execute a given operation
         """
 
         if isinstance(op, list):
@@ -81,7 +94,7 @@ class Program:
     
     def execute_many(self, ops):
         """
-        Executes many operations sequentially.
+        Execute a sequence of operations.
         """
 
         for op in ops:
