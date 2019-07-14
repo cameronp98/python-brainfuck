@@ -12,7 +12,7 @@ class Program:
     
     @property
     def cell(self):
-        self.cells[self.pointer]
+        return self.cells[self.pointer]
     
 
     @cell.setter
