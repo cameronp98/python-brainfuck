@@ -34,7 +34,7 @@ class Program:
             # operations inside the loop.
             # If the cell at the pointer is still non-zero, repeat.
             while self.cell != 0:
-                self.execute_multiple(op)
+                self.execute_many(op)
                 if cell[0] == 0:
                     break
 
@@ -74,9 +74,9 @@ class Program:
             ExecutionError(f"Unknown operation: {op}")
     
     
-    def execute_multiple(self, ops):
+    def execute_many(self, ops):
         """
-        Executes multiple operations sequentially.
+        Executes many operations sequentially.
         """
 
         for op in ops:
