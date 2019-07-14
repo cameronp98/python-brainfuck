@@ -1,3 +1,8 @@
+"""
+Model the state of a brainfuck program and
+act upon it using brainfuck operations.
+"""
+
 class ExecutionError(Exception):
     pass
 
