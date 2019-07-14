@@ -54,7 +54,7 @@ class TestProgram(unittest.TestCase):
         program.modify_pointer(-2)
         self.assertEqual(program.pointer, 0,
                 "Pointer should be decremented by 2")
-        program.modifyPointer(3)
+        program.modify_pointer(3)
         self.assertEqual(program.pointer, 0,
                 "Pointer should be incremented by 3 and wrap around")
 
