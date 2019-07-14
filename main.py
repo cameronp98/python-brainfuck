@@ -1,5 +1,6 @@
 from brainfuck import execute
 
+
 def main():
     try:
         execute(input("bf> "))
