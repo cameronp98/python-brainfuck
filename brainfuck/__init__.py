@@ -2,8 +2,12 @@
 A brainfuck interpreter.
 """
 
+
 from brainfuck.parse import parse
 from brainfuck.program import Program
+
+
+__all__ = ["parse", "program"]
 
 
 # The standard cell requirement is 30,000 cells
