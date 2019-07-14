@@ -19,7 +19,7 @@ class Program:
         Create a new program with a given number of cells
         """
 
-        self.cells = [0 * num_cells]
+        self.cells = [0] * num_cells
         self.pointer = 0
 
     
