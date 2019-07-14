@@ -1,9 +1,8 @@
-import brainfuck
+from brainfuck import execute
 
 
 def main():
-    line = input("bf> ")
-    print(brainfuck.parse(line))
+    execute(input("bf> "))
 
 
 if __name__ == "__main__":
