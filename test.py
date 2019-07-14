@@ -127,7 +127,6 @@ class TestProgram(unittest.TestCase):
                 "Pointer should be reduced to 0")
 
 
-    @unittest.skip("Buggy")
     def test_loop_complex(self):
         """
         Test a complex program which uses a loop to multiply the contents
@@ -138,7 +137,7 @@ class TestProgram(unittest.TestCase):
         program = Program(2)
         program.execute_many(["+", "+", ["-", ">", "+", "+", "<"], ">"])
 
-        if program.pointer == 1 and program.pointer == 4:
+        if program.pointer == 1 and program.cell == 4:
             self.assertEqual(program.cells[0], 0,
                     "Cell 0 should be 0")
         else:
