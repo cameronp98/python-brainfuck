@@ -6,7 +6,7 @@ class Program:
     """Represents the execution state of a brainfuck program."""
 
     def __init__(self, num_cells):
-        self.cells [0 * num_cells]
+        self.cells = [0 * num_cells]
         self.pointer = 0
 
     
